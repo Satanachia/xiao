@@ -6,9 +6,12 @@ module.exports = class SuggestCommandCommand extends Command {
 		super(client, {
 			name: 'suggest-command',
 			aliases: ['command-suggestion', 'command-suggest', 'suggest-cmd', 'cmd-suggest'],
-			group: 'random-res',
+			group: 'util',
 			memberName: 'suggest-command',
-			description: 'Suggests a random command for you to try.'
+			description: 'Suggests a random command for you to try.',
+      details: 'Only the bot owner(s) may use this command.',
+			guarded: true,
+			ownerOnly: true,
 		});
 	}
 

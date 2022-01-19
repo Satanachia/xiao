@@ -10,7 +10,7 @@ module.exports = class DominantColorCommand extends Command {
 			aliases: ['dom-color', 'dominant-colour', 'dom-colour'],
 			group: 'analyze',
 			memberName: 'dominant-color',
-			description: 'Determines the dominant color of an image.',
+			description: 'Determina el color dominante de una imagen.',
 			throttling: {
 				usages: 1,
 				duration: 10
@@ -18,7 +18,7 @@ module.exports = class DominantColorCommand extends Command {
 			args: [
 				{
 					key: 'image',
-					prompt: 'What image would you like to test?',
+					prompt: '¿Qué imagen te gustaría probar?',
 					type: 'image-or-avatar'
 				}
 			]
@@ -38,7 +38,7 @@ module.exports = class DominantColorCommand extends Command {
 			ctx.fillRect(0, 0, canvas.width, canvas.height);
 			return msg.say(hexColor, { files: [{ attachment: canvas.toBuffer(), name: 'dominant-color.png' }] });
 		} catch (err) {
-			return msg.reply(`Oh no, an error occurred: \`${err.message}\`. Try again later!`);
+			return msg.reply(`Un error ha ocurrido \`${err.message}\`. Prueba mas tarde!`);
 		}
 	}
 };

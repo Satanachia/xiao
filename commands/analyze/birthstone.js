@@ -9,11 +9,11 @@ module.exports = class BirthstoneCommand extends Command {
 			name: 'birthstone',
 			group: 'analyze',
 			memberName: 'birthstone',
-			description: 'Responds with the Birthstone for a month.',
+			description: 'Responde con la piedra de nacimiento durante un mes.',
 			args: [
 				{
 					key: 'month',
-					prompt: 'What month would you like to get the birthstone for?',
+					prompt: '¿Para qué mes le gustaría obtener la piedra de nacimiento?',
 					type: 'month'
 				}
 			]
@@ -22,7 +22,7 @@ module.exports = class BirthstoneCommand extends Command {
 
 	run(msg, { month }) {
 		const stone = stones[month - 1];
-		const alternate = stone.alternate ? ` Alternatively, you can also use ${list(stone.alternate, 'or')}.` : '';
-		return msg.say(`The Birthstone for ${firstUpperCase(months[month - 1])} is ${stone.primary}.${alternate}`);
+		const alternate = stone.alternate ? ` De forma alternativa puedes utilizar ${list(stone.alternate, 'o')}.` : '';
+		return msg.say(`La piedra de nacimiento para ${firstUpperCase(months[month - 1])} es ${stone.primary}.${alternate}`);
 	}
 };

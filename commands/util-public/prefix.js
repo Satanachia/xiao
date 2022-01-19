@@ -15,8 +15,8 @@ module.exports = class PrefixCommand extends Command {
 	run(msg) {
 		const prefix = msg.guild ? msg.guild.commandPrefix : this.client.commandPrefix;
 		return msg.reply(stripIndents`
-			${prefix ? `The command prefix is \`${prefix}\`.` : 'There is no command prefix.'}
-			To run a command, use ${msg.anyUsage('<command>')}.
+			${prefix ? `Mi prefix es \`${prefix}\`.` : 'Este no es mi prefix :('}
+			Para utilizar mis comandos ${msg.anyUsage('<command>')}.
 		`);
 	}
 };

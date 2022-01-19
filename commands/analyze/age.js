@@ -6,11 +6,11 @@ module.exports = class AgeCommand extends Command {
 			name: 'age',
 			group: 'analyze',
 			memberName: 'age',
-			description: 'Responds with how old someone born in a certain year is.',
+			description: 'Responde con la edad de alguien nacido en un año determinado.',
 			args: [
 				{
 					key: 'year',
-					prompt: 'What year would you like to get the age for?',
+					prompt: '¿Para qué año le gustaría obtener la edad?',
 					type: 'integer',
 					min: 1
 				}
@@ -21,7 +21,7 @@ module.exports = class AgeCommand extends Command {
 	run(msg, { year }) {
 		const currentYear = new Date().getFullYear();
 		const age = currentYear - year;
-		if (age < 0) return msg.say(`Someone born in ${year} will be born in ${Math.abs(age)} years.`);
-		return msg.say(`Someone born in ${year} would be ${age} years old.`);
+		if (age < 0) return msg.say(`Alguien nacido en ${year} nacera en ${Math.abs (age)} años.`);
+		return msg.say(`Alguien nacido en ${year} tendría ${age} años.`);
 	}
 };

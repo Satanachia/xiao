@@ -11,8 +11,8 @@ module.exports = class XiaoCommand extends Command {
 		this.lastRun = null;
 		this.credit = info.credit || [];
 		this.credit.push({
-			name: 'Dragon Fire',
-			url: 'https://github.com/dragonfire535',
+			name: '0DarkAngel0',
+			url: 'https://github.com/0DarkAngel0/xiao',
 			reason: 'Code'
 		});
 	}

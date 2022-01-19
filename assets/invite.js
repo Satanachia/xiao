@@ -16,9 +16,11 @@ module.exports = class InviteCommand extends Command {
 	async run(msg) {
 		const invite = await this.client.generateInvite({ permissions });
 		return msg.say(stripIndents`
-			Puedes invitarme usando el siguiente [link de invitacion](<${invite}>)
+			Invite me using this link:
+			<${invite}>
 
-			**✰Angelˢᵗ|ᴱˡᵈ#3695 | Developer**
+			Join my home server for support and announcements:
+			${this.client.options.invite || 'Coming soon...'}
 		`);
 	}
 };

@@ -1,8 +1,8 @@
 const Command = require('../../structures/Command');
 const { MessageEmbed } = require('discord.js');
 const { list } = require('../../util/Util');
-const reasons = ['bug', 'feedback', 'suggestion'];
-const reasonColors = ['RED', 'GREEN', 'YELLOW'];
+const reasons = ['bug', 'feedback', 'suggest'];
+const reasonColors = ['RANDOM'];
 const displayReasons = ['🐛 Bug Report', '📬 Feedback', '❓ Suggestion'];
 
 module.exports = class ReportCommand extends Command {

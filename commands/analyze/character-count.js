@@ -9,11 +9,11 @@ module.exports = class CharacterCountCommand extends Command {
 			aliases: ['characters', 'chars', 'length', 'char-count'],
 			group: 'analyze',
 			memberName: 'character-count',
-			description: 'Responds with the character count of text.',
+			description: 'Responde con el recuento de caracteres del texto.',
 			args: [
 				{
 					key: 'text',
-					prompt: 'What text would you like to get the character count of?',
+					prompt: '¿De qué texto le gustaría obtener el recuento de caracteres?',
 					type: 'message|string'
 				}
 			]
